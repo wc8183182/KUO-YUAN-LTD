@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="index.css" />
     <script
       src="https://kit.fontawesome.com/b08cb0abca.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+
+    <title>闊元科技有限公司</title>
   </head>
   <body>
     <!--釘選地方 開始-->
@@ -32,33 +35,46 @@
         <div class="first-line"></div>
       </div>
     </div>
-    <div class="slogan">
-      <div class="container">
-        <div class="left">
-          <div class="left-top">闊元引領 科技未來</div>
-          <h1>人才成長的搖籃</h1>
-          <div class="left-bottom">
-            創意與專業碰撞的舞台。
-            我們相信，唯有不斷成長的員工才能推動企業的長足發展，並在這個瞬息萬變的科技世界中保持領先。
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slogan">
+            <div class="container">
+              <div class="left">
+                <div class="left-top">闊元引領 科技未來</div>
+                <h1>人才成長的搖籃</h1>
+                <div class="left-bottom">
+                  創意與專業碰撞的舞台。
+                  我們相信，唯有不斷成長的員工才能推動企業的長足發展，並在這個瞬息萬變的科技世界中保持領先。
+                </div>
+              </div>
+              <div class="right-img"></div>
+            </div>
           </div>
         </div>
-        <div class="right-img"></div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="right-img flip">
-        <div class="circle">
-          <div class="inside-circle">
-            <div class="logo"></div>
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="right-img flip">
+              <div class="circle">
+                <div class="inside-circle">
+                  <div class="logo"></div>
+                </div>
+              </div>
+            </div>
+            <div class="about">
+              <div class="text">
+                <div class="title">About</div>
+                <div class="name">KUO YUAN LTD.</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="about">
-        <div class="text">
-          <div class="title">About</div>
-          <div class="name">KUO YUAN LTD.</div>
-        </div>
-      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
 
     <div class="company-business">
@@ -89,6 +105,67 @@
         </div>
       </div>
     </div>
+    <div class="toggle-arrow">
+      <i class="fa-solid fa-arrow-left"></i>
+    </div>
+
+    <div class="footer">
+      <div class="name">闊元科技有限公司</div>
+      <div class="info">
+        <div class="line">
+          <div class="icon">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <div class="text">04-23120922</div>
+        </div>
+        <div class="line">
+          <div class="icon">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <div class="text">noah.tech.ltd@gmail.com</div>
+        </div>
+        <div class="line">
+          <div class="icon">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <div class="text">臺中市西區民龍里臺灣大道二段285號14樓之3</div>
+        </div>
+      </div>
+    </div>
+
+    <!--複製套件-->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar", // 顯示進度條
+        },
+        navigation: {
+          // 前一張、下一張按鈕
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      /*複製套件頁尾*/
+      document
+        .querySelector(".toggle-arrow")
+        .addEventListener("click", function () {
+          const footer = document.querySelector(".footer");
+          footer.classList.toggle("show");
+
+          // 更改箭头方向
+          const arrowIcon = document.querySelector(".toggle-arrow i");
+          if (footer.classList.contains("show")) {
+            arrowIcon.classList.remove("fa-arrow-left");
+            arrowIcon.classList.add("fa-arrow-right");
+          } else {
+            arrowIcon.classList.remove("fa-arrow-right");
+            arrowIcon.classList.add("fa-arrow-left");
+          }
+        });
+    </script>
   </body>
 </html>
-#B9AE95

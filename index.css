@@ -8,10 +8,13 @@
 .header {
   width: 100%;
   padding: 30px 20px;
-  border: 1px solid #000;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  opacity: 0.9;
 }
 
 .hambuger {
@@ -42,11 +45,15 @@
   width: 100%;
   height: 100%;
 }
+/* .swiper {
+  width: 100vw;
+  height: 100vh;
+} */
 .slogan {
   width: 100%;
   height: auto;
   background-color: #1c2750;
-  padding-top: 160px;
+  padding-top: 4%;
   padding-left: 20px;
   padding-right: 20px;
   display: flex;
@@ -136,6 +143,7 @@
 
 .company-business {
   display: flex;
+  margin-top: 5%;
 }
 .company-business > .left {
   width: 600px;
@@ -147,10 +155,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.company-business > .left > .title1,
-.company-business > .left > .title2 {
 }
 
 .company-business > .left > .title1 {
@@ -218,4 +222,69 @@
 
 .company-business > .slider > .slider-info4 {
   background-color: #86754d;
+}
+/* 控制箭头按钮的样式 */
+.toggle-arrow {
+  position: fixed;
+  right: 0;
+  top: 75%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #02328d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 11; /* 在页脚上方 */
+}
+
+.toggle-arrow i {
+  font-size: 20px;
+}
+
+/* 页脚样式 */
+.footer {
+  width: 765px;
+  height: 100%;
+  color: white;
+  font-size: 25px;
+  padding-left: 103px;
+  padding-top: 8%;
+  position: fixed;
+  background-color: #02328d;
+  right: -800px; /* 初始在右侧不可见 */
+  top: 0;
+  transition: right 0.8s ease; /* 进入时的动画效果 */
+  z-index: 10;
+}
+
+.footer.show {
+  right: 0; /* 点击箭头后，页脚显示 */
+}
+
+.info {
+  height: 320px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.line {
+  font-size: 25px;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.fa-solid,
+.fa-phone-volume {
+}
+
+.text {
+  display: inline-block;
 }
