@@ -1,0 +1,298 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      .swiper {
+        width: 100vw;
+        height: 100vh;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+
+      .header {
+        width: 100%;
+        padding: 30px 20px;
+        border: 1px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .hambuger {
+        width: 40px;
+        height: 26px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .first-line {
+        width: 30px;
+        height: 2px;
+        background-color: #1c2750;
+        /* margin-top: 2px; */
+      }
+
+      .second-line {
+        width: 100%;
+        height: 2px;
+        background-color: #272830;
+        position: static;
+      }
+
+      .main {
+        background-color: #1c2750;
+        width: 100%;
+        height: 100%;
+      }
+      .slogan {
+        width: 100%;
+        height: auto;
+        background-color: #1c2750;
+        padding-top: 160px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+      }
+
+      .container {
+        width: 1200px;
+        margin: 0 auto;
+        color: #fff;
+        display: flex;
+      }
+      .left-top {
+        color: #21bfca;
+        letter-spacing: 2px;
+        font-weight: 500;
+      }
+      .slogan > .container > .left {
+        flex: 1;
+        padding-top: 10%;
+        padding-right: 100px;
+      }
+      .left h1 {
+        line-height: 70px;
+      }
+
+      .left-bottom {
+        letter-spacing: 1.5px;
+        padding: 10px 0 10px;
+      }
+      .right-img {
+        width: 50%;
+        height: 750px;
+        border: #fff 1px solid;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        background-image: url(./pic/right-img.png);
+      }
+
+      .flip {
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background: #1c2750;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .flip > .circle {
+        width: 350px;
+        height: 350px;
+        background-color: #8fb5ce;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .flip > .circle > .inside-circle {
+        width: 270px;
+        height: 270px;
+        border-radius: 50%;
+        border: #fff 1px solid;
+      }
+
+      .flip > .circle > .inside-circle > .logo {
+        background-image: url(./pic/flip.webp);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-size: cover;
+      }
+
+      .about {
+        padding-top: 7%;
+        padding-left: 80px;
+        flex: 1;
+      }
+      .about .text {
+        font-size: 50px;
+        background: linear-gradient(#3a1c71, #d76d77, #ffaf7b);
+        background-clip: text;
+        color: transparent;
+        font-family: Stencil Std, fantasy;
+      }
+
+      .company-business {
+        display: flex;
+      }
+      .company-business > .left {
+        width: 600px;
+        height: 100vh;
+        background-color: #fff;
+        color: #180a0a;
+        padding: 280px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .company-business > .left > .title1 {
+        font-size: 24px;
+        padding: 30px 0;
+      }
+      .company-business > .left > .title2 {
+        font-size: 61px;
+        padding: 30px 0;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+      }
+
+      .company-business > .slider {
+        width: calc(100vw - 600px);
+        height: 100vh;
+        display: flex;
+      }
+
+      .company-business > .slider > .slider-info1,
+      .slider-info2,
+      .slider-info3,
+      .slider-info4 {
+        width: calc((100vw - 600px) * 0.25);
+        position: relative;
+      }
+
+      .company-business > .slider > .slider-info1:active {
+        width: calc((100vw - 600px) * 0.5);
+      }
+      .slider-info1 > .text,
+      .slider-info2 > .text,
+      .slider-info3 > .text,
+      .slider-info4 > .text {
+        position: absolute;
+        left: 5%;
+        top: 40%;
+        font-size: 40px;
+        color: #fff;
+      }
+
+      .text ~ .num {
+        position: absolute;
+        font-size: 190px;
+        opacity: 0.1;
+        top: 72%;
+        left: -2px;
+        transition: all 0.5s;
+      }
+
+      .num:hover {
+        top: 60%;
+      }
+      .company-business > .slider > .slider-info1 {
+        background-color: #b9ae95;
+      }
+
+      .company-business > .slider > .slider-info2 {
+        background-color: #1c2750;
+      }
+
+      .company-business > .slider > .slider-info3 {
+        background-color: #9b9a9d;
+      }
+
+      .company-business > .slider > .slider-info4 {
+        background-color: #86754d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slogan">
+            <div class="container">
+              <div class="left">
+                <div class="left-top">闊元引領 科技未來</div>
+                <h1>人才成長的搖籃</h1>
+                <div class="left-bottom">
+                  創意與專業碰撞的舞台。
+                  我們相信，唯有不斷成長的員工才能推動企業的長足發展，並在這個瞬息萬變的科技世界中保持領先。
+                </div>
+              </div>
+              <div class="right-img"></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="right-img flip">
+              <div class="circle">
+                <div class="inside-circle">
+                  <div class="logo"></div>
+                </div>
+              </div>
+            </div>
+            <div class="about">
+              <div class="text">
+                <div class="title">About</div>
+                <div class="name">KUO YUAN LTD.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">Page 3</div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar", // 顯示進度條
+        },
+        navigation: {
+          // 前一張、下一張按鈕
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

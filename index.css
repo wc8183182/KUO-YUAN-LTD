@@ -196,8 +196,13 @@
   position: absolute;
   font-size: 190px;
   opacity: 0.1;
-  top: 60%;
+  top: 72%;
   left: -2px;
+  transition: all 0.5s;
+}
+
+.num:hover {
+  top: 60%;
 }
 .company-business > .slider > .slider-info1 {
   background-color: #b9ae95;
