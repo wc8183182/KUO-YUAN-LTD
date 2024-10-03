@@ -155,12 +155,15 @@
 
 .company-business > .left > .title1 {
   font-size: 24px;
+  padding: 30px 0;
 }
-
 .company-business > .left > .title2 {
   font-size: 61px;
-  margin: 30px 0;
+  padding: 30px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
+
 .company-business > .slider {
   width: calc(100vw - 600px);
   height: 100vh;
@@ -183,10 +186,18 @@
 .slider-info3 > .text,
 .slider-info4 > .text {
   position: absolute;
-  left: 40px;
+  left: 5%;
   top: 40%;
   font-size: 40px;
   color: #fff;
+}
+
+.text ~ .num {
+  position: absolute;
+  font-size: 190px;
+  opacity: 0.1;
+  top: 60%;
+  left: -2px;
 }
 .company-business > .slider > .slider-info1 {
   background-color: #b9ae95;
