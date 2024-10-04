@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 3;
   opacity: 0.9;
@@ -143,7 +143,6 @@
 
 .company-business {
   display: flex;
-  margin-top: 5%;
 }
 .company-business > .left {
   width: 600px;
@@ -228,11 +227,11 @@
   position: fixed;
   right: 0;
   top: 75%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #02328d;
+  border: #fff 1px solid;
   color: white;
   display: flex;
   align-items: center;
@@ -241,30 +240,45 @@
   z-index: 11; /* 在页脚上方 */
 }
 
-.toggle-arrow i {
-  font-size: 20px;
+.toggle-arrow {
+  font-size: 40px;
+}
+
+.toggle-arrow-first {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #02328d;
+  border: #fff 1px solid;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 11; /* 在页脚上方 */
 }
 
 /* 页脚样式 */
 .footer {
   width: 765px;
-  height: 100%;
-  color: white;
+  height: 800px;
+  color: #fff;
   font-size: 25px;
   padding-left: 103px;
   padding-top: 8%;
   position: fixed;
   background-color: #02328d;
+  border: #000 1px solid;
   right: -800px; /* 初始在右侧不可见 */
-  top: 0;
+  bottom: 0;
   transition: right 0.8s ease; /* 进入时的动画效果 */
-  z-index: 10;
+  z-index: 2;
 }
 
 .footer.show {
-  right: 0; /* 点击箭头后，页脚显示 */
+  right: 0;
 }
-
+/* 点击箭头后，页脚显示 */
 .info {
   height: 320px;
   display: flex;
@@ -279,10 +293,6 @@
 .icon {
   display: inline-block;
   margin-right: 25px;
-}
-
-.fa-solid,
-.fa-phone-volume {
 }
 
 .text {
