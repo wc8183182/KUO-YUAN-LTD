@@ -5,7 +5,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="culture.css" />
     <script
       src="https://kit.fontawesome.com/b08cb0abca.js"
       crossorigin="anonymous"
@@ -48,61 +48,49 @@
       </div>
     </div>
 
-    <div class="slogan">
-      <div class="container">
-        <div class="left">
-          <div class="left-top">闊元引領 科技未來</div>
-          <h1>人才成長的搖籃</h1>
-          <div class="left-bottom">
-            創意與專業碰撞的舞台。
-            我們相信，唯有不斷成長的員工才能推動企業的長足發展，並在這個瞬息萬變的科技世界中保持領先。
+    <!--關於我們-->
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slogan">
+            <div class="about-me">
+              <div class="title">
+                <div class="font">關於我們</div>
+                <p class="innovation">創新</p>
+                <div class="innovationRight">
+                  創新不僅是技術上的突破，更是一種思維與實踐的結合。我們以開放的態度探索多元觀點，積極迭代，讓產品不斷進步。我們深知創新沒有終點，因此持續以卓越為目標，追求完美。
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="right-img"></div>
-      </div>
-    </div>
-
-    <!-- <div class="container">
-      <div class="right-img flip">
-        <div class="circle">
-          <div class="inside-circle">
-            <div class="logo"></div>
+        <div class="swiper-slide">
+          <div class="about-me">
+            <div class="title">
+              <div class="font">關於我們</div>
+              <p class="innovation">挑戰</p>
+              <div class="innovationRight">
+                挑戰是我們成長的動力。
+                面對困難，我們以積極樂觀的心態迎接，對每個新概念保持謙虛與好奇。我們勇於突破舒適圈，始終全力以赴，為每一次挑戰做好準備。
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="about">
-        <div class="text">
-          <div class="title">About</div>
-          <div class="name">KUO YUAN LTD.</div>
-        </div>
-      </div>
-    </div> -->
 
-    <div class="company-business">
-      <div class="left">
-        <div class="title1">KUOYUAN CONSISTS OF</div>
-        <div class="title2">WHAT WE DO</div>
-        <div class="title1">WITH A VARIETY OF EXPERTISE</div>
-      </div>
-      <div class="slider">
-        <div class="slider-info1">
-          <div class="text">
-            <a>Invent</a>
+        <div class="swiper-slide">
+          <div class="slogan">
+            <div class="about-me">
+              <div class="title">
+                <div class="font">關於我們</div>
+                <p class="innovation">合作</p>
+                <div class="innovationRight">
+                  創造力源自於團隊的共鳴。
+                  我們信奉真誠與尊重的溝通，以每個人的專業與智慧為基礎，互相啟發、激發靈感。團隊合作讓我們能不斷突破自我，朝著更高的目標邁進，共同追求夢想。
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="num">01</div>
-        </div>
-
-        <div class="slider-info2">
-          <div class="text">Design</div>
-          <div class="num">02</div>
-        </div>
-        <div class="slider-info3">
-          <div class="text">Development</div>
-          <div class="num">03</div>
-        </div>
-        <div class="slider-info4">
-          <div class="text">Consulatant</div>
-          <div class="num">04</div>
         </div>
       </div>
     </div>
@@ -144,7 +132,7 @@
         // 創建一個輪播
         autoplay: {
           // 自動輪播 swiper
-          delay: 5 * 1000, // 每兩秒切換下一張
+          delay: 3 * 1000, // 每兩秒切換下一張
         },
         loop: true, // 輪播結束後回到第一張繼續輪播
         navigation: {
@@ -154,7 +142,6 @@
         },
       });
 
-      /*複製套件頁尾*/
       document
         .querySelector(".toggle-arrow")
         .addEventListener("click", function () {
