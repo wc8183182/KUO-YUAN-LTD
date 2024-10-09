@@ -82,7 +82,7 @@
   top: 0;
   left: 0;
   visibility: hidden; /* 使用 visibility 来控制元素是否可见 */
-  transition: all 0.4;
+  /* transition: all 0.4; */
 }
 #menu:checked ~ .menu-link {
   opacity: 1;
@@ -100,7 +100,7 @@
   font-size: 24px;
   text-align: center;
   padding: 10%;
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
   font-weight: 900;
 }
 .menu-link-guoup-item:hover {
@@ -312,6 +312,33 @@
 
 .company-business > .slider > .slider-info4 {
   background-color: #86754d;
+}
+
+/*重點職缺*/
+.job {
+  background-color: #44494e;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 7% 0;
+}
+
+.job .title {
+  font-size: clamp(1.75rem, 2.25vw, 2rem);
+  line-height: 1.5;
+  color: #fff;
+}
+
+.bot {
+  background-image: url(/pic/dot_PNG1.jpg);
+  background-size: cover;
+  /* background-image: radial-gradient(
+    circle at 4px 4px,
+    var(--dot-color, #cbcbcb) 4px,
+    transparent 4px
+  );
+  background-size: 20px 20px;*/
 }
 /* 控制箭头按钮的样式 */
 .toggle-arrow {
