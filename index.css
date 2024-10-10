@@ -319,27 +319,45 @@
   background-color: #44494e;
   width: 100%;
   height: 90%;
-  display: flex;
-  justify-content: center;
-  padding: 7% 0;
+  padding: 80px 0px;
 }
 
 .job .title {
+  width: 70%;
+  height: 26%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.job .title h2 {
   font-size: clamp(1.75rem, 2.25vw, 2rem);
   line-height: 1.5;
   color: #fff;
 }
 
 .bot {
-  background-image: url(/pic/dot_PNG1.jpg);
-  background-size: cover;
-  /* background-image: radial-gradient(
-    circle at 4px 4px,
-    var(--dot-color, #cbcbcb) 4px,
-    transparent 4px
-  );
-  background-size: 20px 20px;*/
+  margin: 32px 0;
+  width: 100%;
+  height: 20%;
+  background: radial-gradient(circle 4px, #9d772c 4px, transparent 4px);
+  background-size: 20px 20px;
+} /*漸層效果(圓型 從x y軸開始4px為原點 , 圓形顏色 圓形範圍 , 超過4px範圍是透明)
+background-size : 整體佔的範圍
+預設是repead*/
+
+.job .container {
+  display: flex;
+  justify-content: space-around;
 }
+
+.container .card {
+  width: 30.3333%;
+  height: 450px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
 /* 控制箭头按钮的样式 */
 .toggle-arrow {
   position: fixed;
