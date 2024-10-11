@@ -322,7 +322,7 @@
   padding: 80px 0px;
 }
 
-.job .title {
+.job > .title {
   width: 70%;
   height: 26%;
   margin: 0 auto;
@@ -330,7 +330,7 @@
   flex-direction: column;
   text-align: center;
 }
-.job .title h2 {
+.job > .title > h2 {
   font-size: clamp(1.75rem, 2.25vw, 2rem);
   line-height: 1.5;
   color: #fff;
@@ -354,8 +354,87 @@ background-size : 整體佔的範圍
 .container .card {
   width: 30.3333%;
   height: 450px;
+  position: relative;
+}
+
+.card .flip-card {
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  padding: 10% 10% 5%;
+}
+.front {
+  position: absolute;
+  font-size: 40px;
   background-color: #fff;
-  border: 1px solid #000;
+  color: #000;
+  backface-visibility: hidden;
+  text-align: left;
+}
+.image {
+  width: 150px;
+  height: 150px;
+  border: #000 1px solid;
+}
+
+.front > .title {
+  text-align: left;
+  font-size: 25px;
+  line-height: 60px;
+  margin-top: 50px;
+}
+
+.front > p {
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.back {
+  position: absolute;
+  background: linear-gradient(145deg, #bf988f, #f1e0d6);
+  font-size: 20px;
+  color: #000;
+  transform: rotateY(180deg);
+  backface-visibility: hidden; /*3D背景影藏*/
+}
+/* #bf988f, #f3e96b    #bf988f, #f1e0d6*/
+.back > .title {
+  text-align: left;
+  font-size: 25px;
+  line-height: 60px;
+  margin-top: 55px;
+  /* margin-bottom: 25px; */
+}
+
+.back > p {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.card:hover .flip-card {
+  transform: rotateY(180deg);
+}
+
+.more {
+  background: linear-gradient(145deg, #bf988f, #f1e0d6);
+  width: 120px;
+  height: 30px;
+  border-radius: 10px;
+  transition: all 0.5s;
+  position: absolute;
+  top: 70%;
+  left: 60%;
+}
+
+.more:hover {
+  background: #fff;
 }
 
 /* 控制箭头按钮的样式 */
