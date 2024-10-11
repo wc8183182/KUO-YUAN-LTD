@@ -5,6 +5,16 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none; /* 移除下划线 */
+  color: inherit; /* 继承父元素的颜色 */
+  cursor: pointer; /* 设置鼠标样式为指针 */
+}
+
+a:hover {
+  color: inherit; /* 悬停时保持颜色不变 */
+}
+
 .header {
   width: 100%;
   padding: 30px 20px;
@@ -79,14 +89,20 @@
   height: 100%;
   background-color: #ececec;
   position: fixed;
-  top: 0;
+  top: -100%;
   left: 0;
-  visibility: hidden; /* 使用 visibility 来控制元素是否可见 */
-  /* transition: all 0.4; */
+  transition: all 1s;
+  /* visibility: hidden; 使用 visibility 来控制元素是否可见 */
 }
+
 #menu:checked ~ .menu-link {
   opacity: 1;
-  visibility: visible; /* 当菜单被选中时显示菜单 */
+  top: 0;
+  /* visibility: visible; 当菜单被选中时显示菜单 */
+}
+
+.menu-link-guoup-item > a {
+  text-decoration: none;
 }
 .menu-link-guoup {
   width: 100%;
@@ -97,15 +113,16 @@
   width: 50%;
   height: 100%;
   border: #000 1px solid;
-  font-size: 24px;
+  font-size: 36px;
   text-align: center;
   padding: 10%;
-  /* transition: all 0.3s; */
+  transition: all 0.3s;
   font-weight: 900;
 }
 .menu-link-guoup-item:hover {
   background-color: #02328d;
   color: #fff;
+  font-size: 52px;
 }
 
 /* .hambuger {
@@ -431,6 +448,12 @@ background-size : 整體佔的範圍
   position: absolute;
   top: 70%;
   left: 60%;
+  cursor: pointer;
+}
+
+.more > a {
+  width: 100%;
+  height: 100%;
 }
 
 .more:hover {
