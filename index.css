@@ -25,6 +25,9 @@ a:hover {
   top: 0;
   z-index: 4;
   opacity: 0.9;
+  background-color: #f5f5f5;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
 }
 
 /*選單線*/
