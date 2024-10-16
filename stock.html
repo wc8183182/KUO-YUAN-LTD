@@ -1,20 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>逐步形成完整圓的旋轉效果</title>
     <style>
-      .line {
-        color: black;
-        width: 360px;
-        height: 1px;
-        stroke-dasharray: 60;
+      .rotating-circle {
+        width: 50px;
+        height: 50px;
+        border: 5px double #3498db;
+        /* border-top: 5px solid #3498db; */
+        border-radius: 50%;
+        /* animation: fillCircle 2s linear infinite; */
+      }
+      .rotating-circle:hover {
+        animation: fillCircle 2s linear infinite;
+      }
+
+      @keyframes fillCircle {
+        0% {
+          border-top-color: #3498db;
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+        }
+        25% {
+          border-top-color: #3498db;
+          border-right-color: #3498db;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+        }
+        50% {
+          border-top-color: #3498db;
+          border-right-color: #3498db;
+          border-bottom-color: #3498db;
+          border-left-color: transparent;
+        }
+        75% {
+          border-top-color: #3498db;
+          border-right-color: #3498db;
+          border-bottom-color: #3498db;
+          border-left-color: #3498db;
+        }
+        100% {
+          border-top-color: #3498db;
+          border-right-color: #3498db;
+          border-bottom-color: #3498db;
+          border-left-color: #3498db;
+        }
       }
     </style>
   </head>
-
   <body>
-    <div class="line">456</div>
+    <div class="rotating-circle"></div>
   </body>
 </html>
