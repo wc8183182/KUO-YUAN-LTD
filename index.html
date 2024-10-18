@@ -69,10 +69,14 @@
         <div class="right-img"></div>
       </div>
       <!--中間間隔-->
-      <div class="rotating-circle"></div>
+      <a href="#company-business">
+        <div class="rotating-circle">
+          <i class="fa-solid fa-arrow-down" style="color: #f5f5f5"></i>
+        </div>
+      </a>
     </div>
 
-    <div class="company-business">
+    <div class="company-business" id="company-business">
       <div class="left">
         <div class="title1">KUOYUAN CONSISTS OF</div>
         <div class="title2">WHAT WE DO</div>
@@ -152,10 +156,15 @@
           <div class="num">04</div>
         </div>
       </div>
+      <a href="#job">
+        <div class="rotating-circle">
+          <i class="fa-solid fa-arrow-down" style="color: #f5f5f5"></i>
+        </div>
+      </a>
     </div>
 
     <!--重點職缺-->
-    <div class="job">
+    <div class="job" id="job">
       <div class="title">
         <h2>重點職缺</h2>
         <div class="bot"></div>
@@ -270,21 +279,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      const swiper = new Swiper(".swiper", {
-        // 創建一個輪播
-        autoplay: {
-          // 自動輪播 swiper
-          delay: 5 * 1000, // 每兩秒切換下一張
-        },
-        loop: true, // 輪播結束後回到第一張繼續輪播
-        navigation: {
-          // 前一張、下一張按鈕
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-
-      /*複製套件頁尾*/
+      /*複製套件 頁尾*/
       document
         .querySelector(".toggle-arrow")
         .addEventListener("click", function () {
@@ -304,4 +299,3 @@
     </script>
   </body>
 </html>
-123
