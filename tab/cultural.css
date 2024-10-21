@@ -132,7 +132,7 @@ html {
   height: 100%;
 }
 .value {
-  background-image: url(./pic/cultural.png);
+  background-image: url(../pic/cultural.png);
   background-size: cover;
   background-position: bottom;
   height: calc(100% - 120px);
