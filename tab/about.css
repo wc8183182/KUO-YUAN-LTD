@@ -127,7 +127,7 @@ a:hover {
   /* overflow: hidden; */
 
   content: "";
-  background-image: url(/pic/aboutme-Innovation.jpg);
+  background-image: url(../pic/aboutme-Innovation.jpg);
   background-size: cover;
   background-position: center;
   /* position: absolute; */
