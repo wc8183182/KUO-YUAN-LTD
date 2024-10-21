@@ -11,7 +11,6 @@
       src="https://kit.fontawesome.com/b08cb0abca.js"
       crossorigin="anonymous"
     ></script>
-
     <title>臣悅科技有限公司</title>
   </head>
   <body>
@@ -51,7 +50,7 @@
             <a href="">文化</a>
           </div>
           <div class="menu-link-guoup-item">
-            <a href="">重點職缺</a>
+            <a href="/index.html#job">重點職缺</a>
           </div>
         </div>
       </div>
@@ -96,5 +95,57 @@
         </div>
       </div>
     </div>
+
+    <!--控制箭头按钮-->
+    <div class="toggle-arrow">
+      <i class="fa-solid fa-arrow-left"></i>
+    </div>
+
+    <div class="footer">
+      <div class="name">臣悅科技有限公司</div>
+      <div class="info">
+        <div class="line">
+          <div class="icon2">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <div class="text">04-23120922</div>
+        </div>
+        <div class="line">
+          <div class="icon2">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <div class="text">noah.tech.ltd@gmail.com</div>
+        </div>
+        <div class="line">
+          <div class="icon2">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="text">臺中市西區民龍里臺灣大道二段285號14樓之3</div>
+        </div>
+      </div>
+    </div>
+
+    <!--複製套件-->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      /*複製套件 頁尾*/
+      document
+        .querySelector(".toggle-arrow")
+        .addEventListener("click", function () {
+          const footer = document.querySelector(".footer");
+          footer.classList.toggle("show");
+
+          // 更改箭头方向
+          const arrowIcon = document.querySelector(".toggle-arrow i");
+          if (footer.classList.contains("show")) {
+            arrowIcon.classList.remove("fa-arrow-left");
+            arrowIcon.classList.add("fa-arrow-right");
+          } else {
+            arrowIcon.classList.remove("fa-arrow-right");
+            arrowIcon.classList.add("fa-arrow-left");
+          }
+        });
+    </script>
   </body>
 </html>

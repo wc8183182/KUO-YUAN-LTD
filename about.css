@@ -178,6 +178,13 @@ a:hover {
   background-color: #fff;
   display: block;
 }
+.num2::before {
+  content: "02";
+}
+
+.num3::before {
+  content: "03";
+}
 
 .innovationRight {
   /* display: inline-block; */
@@ -185,10 +192,10 @@ a:hover {
   position: absolute;
   top: 42%;
   left: 46%;
-  width: 23%;
-  letter-spacing: 0.2em;
+  width: 25%;
+  letter-spacing: 0.1em;
+  font-size: 30px;
 }
-
 /* 控制箭头按钮的样式 */
 .toggle-arrow {
   position: fixed;
@@ -227,7 +234,6 @@ a:hover {
   transition: right 0.8s ease; /* 进入时的动画效果 */
   z-index: 2;
 }
-
 .footer.show {
   right: 0;
 }
@@ -237,4 +243,25 @@ a:hover {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+}
+
+.line {
+  font-size: 25px;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.text {
+  display: inline-block;
+}
+
+#toggler:checked + label .hambuger .first-line {
+  display: none;
+}
+
+#toggler {
+  display: none;
 }

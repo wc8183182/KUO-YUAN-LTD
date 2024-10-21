@@ -215,3 +215,74 @@ a:hover {
 .text > .text-info {
   padding-top: 10px;
 }
+
+/* 控制箭头按钮的样式 */
+.toggle-arrow {
+  position: fixed;
+  right: 0;
+  top: 75%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #02328d;
+  border: #fff 1px solid;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.toggle-arrow {
+  font-size: 40px;
+}
+
+/* 页脚样式 */
+.footer {
+  width: 765px;
+  height: 800px;
+  color: #fff;
+  font-size: 25px;
+  padding-left: 103px;
+  padding-top: 8%;
+  position: fixed;
+  background-color: #02328d;
+  border: #000 1px solid;
+  right: -800px; /* 初始在右侧不可见 */
+  bottom: 0;
+  transition: right 0.8s ease; /* 进入时的动画效果 */
+  z-index: 2;
+}
+
+.footer.show {
+  right: 0;
+}
+/* 点击箭头后，页脚显示 */
+.info {
+  height: 320px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.line {
+  font-size: 25px;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.text {
+  display: inline-block;
+}
+
+#toggler:checked + label .hambuger .first-line {
+  display: none;
+}
+
+#toggler {
+  display: none;
+}
